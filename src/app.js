@@ -22,6 +22,19 @@ const suits = ['hearts', 'spades', 'diamonds', 'clubs'];
 while (confirm('Would you like to play the game?')) {
   // Put your code in this while loop
   // Remember to use prompt and alert
+  alert("Prepare to guess a suit")
+  const rand = getRandomInt(0,4);
+  console.log(rand);
+  const result = prompt("Hearts, spades, diamonds, or clubs?");
+  const input = result.toLowerCase();
+  const type = suits[rand];
+  console.log(input);
+  if (input === type) {
+    alert("Congrats, you win!");
+  }
+  else if (input !== type) {
+    alert("Sorry, you lost!");
+  }
 }
 
 farewell.innerHTML = '<h1>Thanks for playing!<h1>';
